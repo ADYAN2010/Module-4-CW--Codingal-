@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Syntax Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .highlight {
+            color: #007BFF;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Syntax Guide</h1>
+        <h2>Statements, Variables, and Operators</h2>
+        
+        <h3>Arithmetic Operations</h3>
+        <p>First Number: <span class="highlight" id="num1"></span></p>
+        <p>Second Number: <span class="highlight" id="num2"></span></p>
+        <p>Sum: <span class="highlight" id="sum"></span></p>
+        <p>Difference: <span class="highlight" id="difference"></span></p>
+        <p>Product: <span class="highlight" id="product"></span></p>
+        <p>Quotient: <span class="highlight" id="quotient"></span></p>
+    </div>
+
+    <script>
+        // JavaScript Statements: Declaring and initializing variables
+        let num1 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+        let num2 = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+        
+        // Using operators to perform arithmetic calculations
+        let sum = num1 + num2;       // Addition
+        let difference = num1 - num2; // Subtraction
+        let product = num1 * num2;    // Multiplication
+        let quotient = (num2 !== 0) ? (num1 / num2).toFixed(2) : "Undefined"; // Division with check to prevent division by zero
+        
+        // Displaying values in the document
+        document.getElementById("num1").textContent = "the first number is " +num1+"." ;
+        document.getElementById("num2").textContent = "the second number is " +num2+ ".";
+        document.getElementById("sum").textContent = sum;
+        document.getElementById("difference").textContent = difference;
+        document.getElementById("product").textContent = product;
+        document.getElementById("quotient").textContent = quotient;
+    </script>
+</body>
+</html>
