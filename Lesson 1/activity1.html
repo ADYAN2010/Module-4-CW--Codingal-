@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Guide & Commenting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Syntax Guide & Commenting</h1>
+        <p>Understanding syntax and commenting is essential for coding.</p>
+        
+        <h2>1. HTML Comments</h2>
+        <pre>&lt;!-- This is an HTML comment --&gt;</pre>
+        
+        <h2>2. CSS Comments</h2>
+        <pre>/* This is a CSS comment */</pre>
+        
+        <h2>3. JavaScript Comments</h2>
+        <pre>
+// This is a single-line comment
+/* This is a multi-line comment */
+        </pre>
+
+        <h2>4. JavaScript Example</h2>
+        <button onclick="showMessage()">Click Me</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        // Function to display a message
+        function showMessage() {
+            /* This function updates the text of the paragraph */
+            document.getElementById("message").textContent = "Syntax and commenting are important!";
+        }
+    </script>
+</body>
+</html>
