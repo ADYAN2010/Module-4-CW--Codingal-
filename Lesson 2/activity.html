@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atithe Porayon</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d35400;
+        }
+        button {
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h2>Basic Function</h2>
+    <button onclick="showMessage()">Execute JavaScript Function</button>
+    
+    <h2>Scope of Variable</h2>
+    <button onclick="sweetDetails()">Click Me!</button>
+    
+    <h2>Expression of Function</h2>
+    <p id="priceResult"></p>
+    
+    <script>
+        // Display a message about Atithe Porayon
+        function showMessage() {
+            alert("Atithe Porayon offers the finest historic sweets!");
+        }
+        
+        // Scope of variables in function
+        function sweetDetails() {
+            var sweetName = "Chomchom"; // Function-scoped
+            let origin = "Porabari, Tangail"; // Block-scoped
+            const specialty = "Authentic taste"; // Block-scoped
+            alert(sweetName + " from " + origin + " is known for " + specialty);
+        }
+        
+        // Expression function to calculate total price
+        const calculatePrice = function(price, quantity) {
+            return price * quantity;
+        };
+        
+        document.getElementById("priceResult").innerText = calculatePrice(20, 2);
+    </script>
+</body>
+</html>
