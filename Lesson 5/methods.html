@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Methods</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h2 { color: #333; }
+    p { background: #f4f4f4; padding: 10px; border-left: 4px solid #28a745; }
+  </style>
+</head>
+<body>
+  <h2>Array Methods Demo</h2>
+  <p id="methodOutput"></p>
+
+  <script>
+    const numbers = [10, 20, 30, 40];
+    numbers.push(50);
+    numbers.pop();
+    numbers.shift();
+    numbers.unshift(5);
+    document.getElementById("methodOutput").textContent = `Modified Array: ${numbers.join(', ')}`;
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cell Stack</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h2 { color: #333; }
+    button {
+      margin-right: 10px;
+      padding: 8px 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover { background-color: #0056b3; }
+    #stackDisplay {
+      margin-top: 20px;
+      background: #f8f9fa;
+      padding: 10px;
+      border-left: 4px solid #17a2b8;
+    }
+  </style>
+</head>
+<body>
+  <h2>Cell Stack (Push, Pop, Clear)</h2>
+  <button onclick="pushCell()">Push</button>
+  <button onclick="popCell()">Pop</button>
+  <button onclick="clearStack()">Clear</button>
+  <div id="stackDisplay">Stack: (empty)</div>
+
+  <script>
+    const cellStack = [];
+
+    function pushCell() {
+      const value = prompt("Enter a value to push:");
+      if (value && value.trim() !== "") {
+        cellStack.push(value.trim());
+        displayStack();
+      } else {
+        alert("Please enter a non-empty value.");
+      }
+    }
+
+    function popCell() {
+      if (cellStack.length > 0) {
+        cellStack.pop();
+        displayStack();
+      } else {
+        alert("Stack is already empty.");
+      }
+    }
+
+    function clearStack() {
+      cellStack.length = 0;
+      displayStack();
+    }
+
+    function displayStack() {
+      const display = document.getElementById("stackDisplay");
+      display.textContent = cellStack.length
+        ? `Stack: ${cellStack.join(', ')}`
+        : "Stack: (empty)";
+    }
+
+    // Show initial state
+    displayStack();
+  </script>
+</body>
+</html>
