@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Real-time Validation</title>
+  <title>Simple Login</title>
 </head>
 <body>
-  <h2>Username</h2>
-  <input type="text" id="username" onkeyup="validateUsername()">
-  <p id="message" style="color: red;"></p>
+  <h2>Login Page</h2>
+  
+  <label>Username:</label><br>
+  <input type="text" id="username"><br><br>
+  
+  <label>Password:</label><br>
+  <input type="password" id="password"><br><br>
+  
+  <button onclick="login()">Login</button>
+  
+  <p id="message" style="color: rgb(38, 248, 11);"></p>
 
   <script src="script.js"></script>
 </body>
