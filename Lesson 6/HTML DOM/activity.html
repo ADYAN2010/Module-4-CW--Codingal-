@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple DOM</title>
+</head>
+<body>
+  <h1 id="title">Hello DOM!</h1>
+  <p id="text">This is a paragraph.</p>
+  <button onclick="changeText()">Click Me</button>
+
+  <script>
+    function changeText() {
+      document.getElementById("title").innerHTML = "Title Changed!";
+      document.getElementById("text").innerHTML = "Paragraph updated!";
+    }
+  </script>
+</body>
+</html>
